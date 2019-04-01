@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.headers{
+    height: 80px;
+    display: block;
+    width: 100%;
+    background: -webkit-linear-gradient(left,#5fe8ce 2%,#4da5ed);
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    transition: all .3s;
+}
+.header-box {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    margin-left: 2.5%;
+    transition: all .2s;
+}
+.headers h2 {
+    font-weight: 700;
+    color: #fff;
+    font-family: SimHei,Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    float: left;
+    width: 85%;
+    height: 20px;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.header-search {
+    display: table;
+    width: 95%;
+    margin: 0 auto;
+    transition: all .1s;
+}
+.header-search .search-input {
+    background-color: #f5f9fa;
+    border-radius: 3px;
+    font-family: SimHei,Helvetica,Arial,sans-serif;
+    font-weight: 200;
+    height: 33px;
+    width: 100%;
+    border: 0;
+    text-align: center;
+    transition: all .2s;
+    background-size: 15px 15px;
+    background-position: 25%;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #4d4e58;
+    font-size: 14px;
+    letter-spacing: 1px;
+    outline: none;
+}
+.header-search-action .search-input, .header-search .search-input {
+    background-image: url(http://img.zdfei.com/static/image/htmls/single/2018-11-22/5bf677a1cfe12xx2.png);
+    background-repeat: no-repeat;
+    font-size: 13px;
+}
+#outer-qckuj{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 2.5%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+}
+.ant-carousel .slick-slide {
+    text-align: center;
+    height: 114px;
+    line-height: 114px;
+    background: #364d79;
+    overflow: hidden;
+}
