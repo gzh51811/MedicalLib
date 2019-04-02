@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import './home.css';
-import { Carousel } from 'antd';
+import { Carousel ,List, message, Avatar, Spin} from 'antd';
+import axios from 'axios';
 import 'antd/dist/antd.css';
 class Home extends  Component{
     constructor(){
@@ -138,18 +139,7 @@ class Home extends  Component{
                    <div className='fangan-box'>
                         <h2>健康照顾方案</h2>
                         <ul className="fangan-list-ul">
-                            <li>
-                                <img src="http://img.zdfei.com/static/image/temp/20181107/2cb179b3c6a2af370222758fe4e74d87xx2.jpg"/>
-                            </li>
-                            <li>
-                                <img src="http://img.zdfei.com/static/image/temp/20181107/2cb179b3c6a2af370222758fe4e74d87xx2.jpg"/>
-                            </li>
-                            <li>
-                                <img src="http://img.zdfei.com/static/image/temp/20181107/2cb179b3c6a2af370222758fe4e74d87xx2.jpg"/>
-                            </li>
-                            <li>
-                                <img src="http://img.zdfei.com/static/image/temp/20181107/2cb179b3c6a2af370222758fe4e74d87xx2.jpg"/>
-                            </li>
+
                         </ul>
                    </div>
             </div>
