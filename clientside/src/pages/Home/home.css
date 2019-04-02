@@ -1,7 +1,8 @@
-*{
+#homepage{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+	padding-bottom: 44px;
 }
 
 .headers{
@@ -37,6 +38,7 @@
     -webkit-line-clamp: 1;
     white-space: nowrap;
     text-overflow: ellipsis;
+	margin-bottom: 0;
 }
 .header-search {
     display: table;
@@ -70,20 +72,273 @@
     background-repeat: no-repeat;
     font-size: 13px;
 }
+.bannertop{
+	height: 80px;
+	margin-bottom: 2%;
+}
 #outer-qckuj{
     width: 95%;
     margin: 0 auto;
-    margin-top: 2.5%;
     margin: 0 auto;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+#outer-qckuj img{
+	width: 100%;
+}
+#outer-qckuj .slick-dots{
+	bottom: -10px;
+}
+#outer-qckuj .slick-list{
+	border-radius: 5px;
+}
+#outer-qckuj .slick-dots li{
+	background: #000;
+	height: 2.5px;
+	opacity: .2;
+}
+#outer-qckuj .slick-dots li button{
+	height: 2.5px;
+}
+#outer-qckuj .slick-dots .slick-active{
+	opacity: 1;
+	height: 2.5px;
+}
+#outer-qckuj .slick-active button{
+	display: block;
+	background: #007aff;
+	height: 2.5px;
+}
+
+
+
+#homepage .home-class{
+	display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+	width: 95%;
+    margin: 0 auto;
+	margin-top: 26px;
+}
+#homepage .home-class .home-col{
+	text-align: center;
+    width: 20%!important;
+	position: relative;
+    margin-top: 10px;
+	float: left;
+    flex: 0 0 auto;
+}
+#homepage .home-class .home-col a{
+	color: #2d8cf0;
+    background: 0 0;
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+    transition: color .2s ease;
+}
+#homepage .home-class .home-col img{
+	width: 40px;
+    height: 40px;
+}
+#homepage .home-class .home-col .classspan-info{
+	display: table;
+    width: 100%;
+    margin-top: 10px;
+    font-family: SimHei,Helvetica,Arial,sans-serif;
+    color: #4d4e58;
+    font-size: 12px;
+}
+
+
+#homepage .home-store{
+	width: 95%;
+    margin: 0 auto;
+    height: 91px;
+    background-size: 100%;
+    background-position: 50%;
+    margin-top: 5%;
+    display: table;
+    overflow: hidden;
+}
+#homepage .home-store img{
+	width: 100%;
+}
+#homepage .home-store .store-info{
+	margin-top: -91px;
+	position: absolute;
+    padding: 10px;
+    transition: all .3s;
+}
+#homepage .home-store .store-info h2{
+	font-size: 14px;
+    color: #4d4e58;
+    font-family: aril;
+    letter-spacing: 1px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+#homepage .home-store .store-info h2 img{
+	width: 7px;
+	height: 12px;
+    margin-left: 15px;
+    position: relative;
+    top: -1px;
+}
+#homepage .home-store .store-info .store-name{
+	font-size: 12px;
+    color: #4d4e58;
+    margin-top: 2px;
+    font-family: SimHei,Helvetica,Arial,sans-serif;
+	font-weight: 500;
+}
+#homepage .toutiao-box{
+	width: 95%;
+    margin: 0 auto;
+    height: 58px;
+    margin-top: 5%;
+    line-height: 58px;
+    border-top: 1px solid #dee2f6;
+    border-bottom: 1px solid #dee2f6;
+	position: relative;
+}
+#homepage .toutiao-box .toutiao_option{
+	line-height: 58px;
+    height: 58px;
+    overflow: hidden;
+	width: 25%;
+	right: 75%;
+	float: left;
+}
+#homepage .toutiao-box .toutiao_option img{
+	width: 100%;
+}
+#homepage .toutiao-box .toutiao_option-right{
+	line-height: 58px;
+	height: 58px;
+	overflow: hidden;
+	left: 25%;
+	width: 75%;
+	float: left;
+}
+#homepage .toutiao-box .slick-track{
+	height: 58px!important;
+    padding-left: 5px;
+	flex-shrink: 0;
+    width: 100%;
+	position: relative;
+    transition-property: transform;
+}
+#homepage .toutiao-box .slick-track h3{
+	width: 95%;
+    height: 56px;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+	line-height: 58px;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #4d4e58;
+    font-size: 13px;
+    padding-left: 2.5%;
+    display: block;
+}
+
+
+#homepage .hotgoods-box{
+	width: 95%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+#homepage .hotgoods-box h2{
+	font-family: SimHei,Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    color: #4d4e58;
+	font-weight: 600;
+}
+#homepage .hotgoods-box .hotgoods-list{
+	margin-top:5%;
+	height: auto;
+	width: 100%;
+	margin: 0 auto;
     position: relative;
     overflow: hidden;
     list-style: none;
     padding: 0;
+    z-index: 1;
 }
-.ant-carousel .slick-slide {
+#homepage .hotgoods-box .hotgoods-list .list-goods{
+	width: auto;
+	display: flex;
+	overflow: auto;
+}
+#homepage .hotgoods-box .hotgoods-list .list-goods::-webkit-scrollbar{
+	display: none;
+}
+#homepage .hotgoods-box .hotgoods-list .list-goods .goods-item{
+	width: 30vw;
+	margin-right: 10px;
+	border: 1px solid #eff1f7;
+	border-radius: 5px;
+	padding: 10px;
+	height: auto;
+	position: relative;
+	transition-property: transform;
+}
+/* #homepage .hotgoods-box .hotgoods-list .list-goods .list-goods-in{
+	width: 1170px;
+	display: flex;
+	transform:translate3d(0px, 0px, 0px);
+    transition-duration: 0ms;
+	position: relative;
+} */
+#homepage .hotgoods-box .hotgoods-list .list-goods img{
+	width: 100%;
+	border-style: none;
+}
+#homepage .hotgoods-box .hotgoods-list .list-goods .item_title{
+	overflow: hidden;
+    -webkit-line-clamp: 1;
+    color: #4d4e58;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#homepage .hotgoods-box .hotgoods-list .list-goods .item_price{
+	color: #ff6b5f;
+    margin-top: 5px;
+    font-family: SimHei,Helvetica,Arial,sans-serif;
+    font-weight: 600;
+}
+.item_price, .item_title {
+    font-size: 12px;
+    height: 15px;
+}
+
+
+#homepage .fangan-box{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 5%;
+
+}
+#homepage .fangan-box h2{
+    font-family: SimHei,Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    color: #4d4e58;
+    font-weight: 600;
+}
+#homepage .fangan-box .fangan-list-ul{
+    margin: 0 auto;
+    padding-top: 2.5%;
+}
+#homepage .fangan-box .fangan-list-ul li{
+    margin-top: 2.5%;
+    width: 100%;
+    display: table;
     text-align: center;
-    height: 114px;
-    line-height: 114px;
-    background: #364d79;
-    overflow: hidden;
+}
+#homepage .fangan-box .fangan-list-ul li img{
+    width: 100%;
+    margin: 0 auto;
 }
