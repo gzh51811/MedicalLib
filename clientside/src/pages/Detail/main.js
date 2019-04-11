@@ -3,6 +3,7 @@ import './detail.css'
 import axios from 'axios'
 import Swiper from 'swiper/dist/js/swiper.js'
 import 'swiper/dist/css/swiper.min.css'
+import {withRouter} from 'react-router-dom';
 import { Tabs,BackTop  } from 'antd';
 const TabPane = Tabs.TabPane;
 
@@ -81,6 +82,11 @@ class Main extends React.Component{
           })
    }
 
+   goback(){
+       console.log(this.props)
+       this.props.history.goBack()
+   }
+
 
     render(){
         // console.log(this.props.msg.goodsimages);
@@ -91,7 +97,7 @@ class Main extends React.Component{
         return(
             <div id='detailmain'>
                 <header>
-                    <span className='_head_left'></span>
+                    <span className='_head_left' onClick={this.goback.bind(this)}></span>
                     <span className='_right_sign'></span>
                 </header>
                 <div className='details-main'>
@@ -331,5 +337,7 @@ class Main extends React.Component{
     }
 
 }
+
+Main = withRouter(Main)
 
 export default Main

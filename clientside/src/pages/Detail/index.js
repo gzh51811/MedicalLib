@@ -16,11 +16,15 @@ class Detail extends Component{
         }
     }
     componentWillMount(){
+
+        let search = window.location.hash.split('?')[1];
+        let goodsId = search.split('=')[1];
+
         axios.get('http://router.111yao.com//sltRouter',{
                params:{
                    method:'goodsDetailWapMINAUse',
                    platFormType:'wap',
-                   goodsId:654,
+                   goodsId,
                    storeId:''
                }
            }).then((response)=> {

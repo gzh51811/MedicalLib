@@ -3,9 +3,26 @@ import './bottommenu.css'
 import cartAction from '../../actions/cartAction'
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom'
+import axios from 'axios'
+import qs from 'qs'
 
 class BottomMenu extends Component{
 
+
+    addtocart(cartgoods){
+        // console.log(cartgoods)
+
+        axios.post('http://localhost:8000/detail', qs.stringify({
+   cartgoods
+}))
+            
+          .then((response) => {
+            console.log(response);
+            this.props.history.push('/cart')
+          })
+
+
+    }
 
     render(){
         let {add2cart} = this.props;
@@ -31,7 +48,7 @@ class BottomMenu extends Component{
                     </ul>
                 </div>
                 <div className='_f_list _w54 jrqd_btn'>
-                    <div id='jrqd' onClick={add2cart.bind(this,cartgoods)}>加入清单</div>
+                    <div id='jrqd' onClick={this.addtocart.bind(this,cartgoods)}>加入清单</div>
                     <div id='ljgm'>立即购买</div>
                 </div>
             </div>
@@ -40,17 +57,17 @@ class BottomMenu extends Component{
 
 }
 
-BottomMenu = connect(()=>{
-    return{}
-},(dispatch)=>{
-    return{
-        add2cart(cartgoods){
-            // console.log(cartgoods)
-            dispatch(cartAction.add(cartgoods));
-            this.props.history.push('/cart')
-        }
-    }
-})(BottomMenu)
+// BottomMenu = connect(()=>{
+//     return{}
+// },(dispatch)=>{
+//     return{
+//         add2cart(cartgoods){
+//             // console.log(cartgoods)
+//             dispatch(cartAction.add(cartgoods));
+//             this.props.history.push('/cart')
+//         }
+//     }
+// })(BottomMenu)
 
 BottomMenu = withRouter(BottomMenu);
 

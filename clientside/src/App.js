@@ -16,7 +16,11 @@ import Classify from './pages/Classify';
 import Counsel from './pages/Counsel';
 import Cart from './pages/Cart';
 import Mine from './pages/Mine';
+
 import Detail from './pages/Detail'
+
+import MedicalList from './pages/MedicalList';
+
 
 class App extends Component {
 
@@ -72,7 +76,11 @@ class App extends Component {
 						<Route path="/counsel" component={Counsel}/>
 						<Route path="/cart" component={Cart}/>
 						<Route path="/mine" component={Mine}/>
+
 						<Route path="/detail" component={Detail}/>
+
+						<Route path="/medicallist" component={MedicalList}/>
+
 						<Redirect to="/home"/>
 					</Switch>
 					<footer>

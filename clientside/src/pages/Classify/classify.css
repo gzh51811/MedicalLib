@@ -1,17 +1,19 @@
-.classify header {width: 100%; padding-top: 7px; height: 37px; border-bottom: 1px solid #fff; background: #fff;}
+.classify {padding-bottom: 44px;}
+.classify header {width: 100%; padding-top: 7px; height: 37px; border-bottom: 1px solid #fff; background: #fff; position: fixed; top: 0; left: 0;}
 .classify header .seaInput {height: 30px; background: #efefef; border-radius: 20px; padding: 0 14px 0 34px; width: 70%; margin: auto; position: relative;}
 .classify header .seaInput input {font-size: 14px; height: 18px; line-height: 18px; width: 100%; float: left; margin: 6px 0; color: #222; overflow: hidden; wrod-break: keep-all; white-space: nowrap; text-overflow: ellipsis; background: #efefef;}
 .classify header .seaInput span {width: 34px; height: 30px; display: block; position: absolute; left: 0; top: 0; background: url(../../assets/img/fdj.png) no-repeat 14px center; background-size: 14px;}
 
-.classify .level_nav {width: 100%; transition-timing-function: cubic-bezier(.1,.57,.1,1); transition-duration: 0; transform: translate(4px, 0px) translateZ(0px); padding-left: 5px; height: 50px; overflow: scroll hidden; background: #fff; box-shadow: inset 0 -1px 0 0 #efefef;}
+.classify .level_nav {width: 100%; transition-timing-function: cubic-bezier(.1,.57,.1,1); transition-duration: 0; transform: translate(4px, 0px) translateZ(0px); padding-left: 5px; height: 50px; overflow: scroll hidden; background: #fff; box-shadow: inset 0 -1px 0 0 #efefef; position: fixed; top: 37px; left: 0;}
 .classify .level_nav::-webkit-scrollbar {display: none;}
-.classify .level_nav ul {width: 370px; overflow: hidden;}
+.classify .level_nav ul {width: 370px; overflow: hidden; position: absolute; left: 0;}
 .classify .level_nav ul li {text-align: center; font-size: 18px; float: left;}
 .classify .level_nav ul li a {color: #222; line-height: 50px; font-size: 14px; display: block; padding: 0 9px;}
 .classify .level_nav ul li a.active {height: 49px; border-bottom: 2px solid #222; font-weight: bold;}
 
-.classify .productwrapper {padding: 0 18px 44px 18px;}
-.classify .productwrapper .conttitle {padding: 18px 0 15px 0;}
-.classify .productwrapper .contcontent ul::after {content: ""; display: block; height: 0; overflow: hidden; visibility: hidden;}
-.classify .productwrapper .contcontent ul li {width: 33.3%; float: left; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
-.classify .productwrapper .contcontent ul li a {display: block; height: 100%; font-size: 14px; text-align: center; line-hegiht: 20px; padding: 15px 0; color: #222;}
+.classify .productwrapper {padding: 104px 18px 360px 18px;}
+.classify .productwrapper .conttitle {padding: 18px 0 0 0;}
+.classify .productwrapper .conttitle img {width: 100%;}
+.classify .productwrapper .contcontent::after {content: ""; display: block; height: 0; overflow: hidden; visibility: hidden; clear: both}
+.classify .productwrapper .contcontent li {width: 33.3%; float: left; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.classify .productwrapper .contcontent li a {display: block; height: 100%; font-size: 14px; text-align: center; line-hegiht: 20px; padding: 15px 0; color: #222;}

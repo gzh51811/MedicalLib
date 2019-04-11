@@ -10,7 +10,7 @@ let allowOrigin = [
     'http://localhost:3000'
 ];
 
-app.use((req, res, err) => {
+app.use((req, res, next) => {
     let origin = req.get('Origin');
     let index = allowOrigin.indexOf(origin);
 

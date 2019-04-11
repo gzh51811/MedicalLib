@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom'
 import {connect} from 'react-redux';
 import Gundong from './Gundong'
 import {bindActionCreators} from 'redux';
+import axios from 'axios'
 import cartAction from '../../actions/cartAction';
 // 多选
 const CheckboxGroup = Checkbox.Group;
@@ -16,19 +17,36 @@ class Cart extends Component {
     constructor (){
         super();
         this.state = {
-            // cartgoods:[]
+            cartgoods:[]
         }
+    }
+
+    componentWillMount(){
+        axios.get('http://localhost:8000/cart').then((res)=>{
+            console.log(res.data);
+            this.setState({
+                cartgoods:res.data
+            })
+            
+			})
+			// console.log(this.state.navs)
+		
+    }
+    goback(){
+        console.log(this.props)
+        this.props.history.goBack()
     }
 
 
     render(){
-        let {cartgoods} = this.props
-        console.log('cart',this);
-        console.log(cartgoods);
+        // let {cartgoods} = this.props
+        console.log('cart',this.state.cartgoods);
+        let {cartgoods} = this.state
+        // console.log(cartgoods);
         return (
             <div id="cart">
                 <header className='_activity_header'>
-                    <a className='_personal_centers'>
+                    <a className='_personal_centers' onClick={this.goback.bind(this)}>
                         <img src='http://img.zdfei.com/static/image/htmls/single/2017-07-19/596eea3c79050.png' />
                     </a>
                     <p className='_header_title'>药品清单</p>
@@ -47,33 +65,39 @@ class Cart extends Component {
                             <Gundong/>
                             <div className='_activity_cont'>
                                 <ul>
-                                    <li className='_activity_list'>
-                                        <dl className='_act_list'>
-                                            <Checkbox />
-                                            <dd className='_act_img'>
-                                                <img src={cartgoods[1].goods_img} />
-                                                <span className='bg-icon'></span>
-                                            </dd>
-                                            <dd className='_act_text'>
-                                                <p className='_product_name'>{cartgoods[1].goods_name}</p>
-                                                <p className='_limit_number'></p>
-                                                <p className='_product_standard'>
-                                                    <span className='_standard_num'>{cartgoods[1].spec}</span>
-                                                </p>
-                                                <p className='_buy_price'>
-                                                    ￥<span className='_price_number'>{cartgoods[1].price}</span>
-                                                    <span className='_del_price'>￥</span>
-                                                </p>
 
-                                            </dd>
-                                        </dl>
-                                        <div className='_cart_product_count'>
-                                            <div className='_minus_one'></div>
-                                            <input type='number' className='_cart_input' value={1} min='1' readOnly/>
-                                            <div className='_add_one'></div>
+                                    {
+                                        cartgoods.map((item,idx)=>{
+                                            return <li className='_activity_list' key={idx}>
+                                            <dl className='_act_list'>
+                                                <Checkbox />
+                                                <dd className='_act_img'>
+                                                    <img src={item.goods_img} />
+                                                    <span className='bg-icon'></span>
+                                                </dd>
+                                                <dd className='_act_text'>
+                                                    <p className='_product_name'>{item.goods_name}</p>
+                                                    <p className='_limit_number'></p>
+                                                    <p className='_product_standard'>
+                                                        <span className='_standard_num'>{item.spec}</span>
+                                                    </p>
+                                                    <p className='_buy_price'>
+                                                        ￥<span className='_price_number'>{item.price}</span>
+                                                        <span className='_del_price'>￥</span>
+                                                    </p>
+    
+                                                </dd>
+                                            </dl>
+                                            <div className='_cart_product_count'>
+                                                <div className='_minus_one'></div>
+                                                <input type='number' className='_cart_input' value={item.qty} min='1' readOnly/>
+                                                <div className='_add_one'></div>
+    
+                                            </div>
+                                        </li>
+                                        })
+                                    }
 
-                                        </div>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
