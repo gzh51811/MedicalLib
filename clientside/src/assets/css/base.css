@@ -4,14 +4,14 @@ fieldset, img,input,button {border:0 none; padding:0; margin:0; outline-style:no
 ul, li, ol {list-style:none; }
 
 /* 行内元素的垂直居中 */
-/* 
-vertical-align：top 
+/*
+vertical-align：top
 
 */
 select, input {vertical-align:middle;}
 /*select, input, textarea { font-size:12px; margin:0; }*/
 textarea { resize:none; } /*防止拖动*/
-img {border:0; vertical-align:middle;}  
+img {border:0; vertical-align:middle;}
 /*  去掉图片低测默认的3像素空白缝隙，或者用display：block也可以*/
 /* table { border-collapse:collapse; } */
 
@@ -45,4 +45,3 @@ s, i, em {font-style:normal; text-decoration:none;}
 .bb {box-sizing: border-box;}
 .flex {display: flex;}
 div {box-sizing: border-box;}
-

@@ -10,6 +10,7 @@ import Classify from './pages/Classify';
 import Counsel from './pages/Counsel';
 import Cart from './pages/Cart';
 import Mine from './pages/Mine';
+import MedicalList from './pages/MedicalList';
 
 class App extends Component {
 	constructor(){
@@ -45,7 +46,7 @@ class App extends Component {
 			showcon: 'block'
         }
 	}
-	
+
 	showFooter = (isOk)=>{
 		if(isOk){
 			this.setState({
@@ -64,6 +65,7 @@ class App extends Component {
 						<Route path="/counsel" component={Counsel}/>
 						<Route path="/cart" component={Cart}/>
 						<Route path="/mine" component={Mine}/>
+						<Route path="/medicallist" component={MedicalList}/>
 						<Redirect to="/home"/>
 					</Switch>
 					<footer>

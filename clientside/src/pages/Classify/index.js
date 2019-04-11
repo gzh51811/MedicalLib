@@ -10,10 +10,12 @@ class Classify extends Component {
 	constructor(){
 		super();
 		this.state = {
-			navs: []
+			navs: [],
+			nav_cont: [],
+			activeId: 0,
+			currentTop: 0
 		};
 	}
-
 
 	componentWillMount(){
 		axios.get('http://localhost:8000/classify').then((res)=>{
@@ -23,7 +25,26 @@ class Classify extends Component {
 			this.setState({
 				navs: [...arr]
 			})
-			console.log(this.state.navs)
+			// console.log(this.state.navs)
+		});
+	}
+
+	activeNav = (idx)=>{
+		this.setState({
+			activeId: idx
+		},()=>{
+			this.refs.navs.style.left = -idx * ((375-320)/4) + 'px';
+			var pw = document.querySelector('.productwrapper');
+			// console.log(pw)
+			window.scrollTo(0, pw.children[idx].offsetTop - 104)
+		});
+	}
+
+	scrollChangeActiveId = (i)=>{
+		this.setState({
+			activeId: i
+		},()=>{
+			this.refs.navs.style.left = -i * ((375-320)/4) + 'px';
 		});
 	}
 
@@ -37,11 +58,19 @@ class Classify extends Component {
 					</div>
 				</header>
 				<div className="level_nav">
-					<ul>
-						<li><a href="javascript:;" className="active">人群找药</a></li>
+					<ul ref="navs">
+					{
+						this.state.navs.map((nav,idx)=>{
+							return <li key={nav.pid}>
+								<a href="javascript:;" className={this.state.activeId==idx?'active':''} onClick={this.activeNav.bind(this,idx)}>
+									{nav.name}
+								</a>
+							</li>
+						})
+					}
 					</ul>
 				</div>
-				<ProductWrapper/>
+				<ProductWrapper navs={this.state.navs} scrollChangeActiveId={this.scrollChangeActiveId}/>
 			</div>
         );
     }
