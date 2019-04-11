@@ -13,6 +13,7 @@ import Mine from './pages/Mine';
 import MedicalList from './pages/MedicalList';
 
 class App extends Component {
+
 	constructor(){
         super();
 
@@ -87,6 +88,7 @@ class App extends Component {
 			</div>
 		);
 	}
+
 }
 
 export default App;
