@@ -3,13 +3,20 @@ import React, { Component } from 'react';
 import './assets/css/base.css';
 import './App.css';
 
+import { Badge, Icon } from 'antd';
+
 import {HashRouter,NavLink, Route, Switch, Redirect} from 'react-router-dom';
+
+import store from './store.js'
+
+import {connect} from 'react-redux'
 
 import Home from './pages/Home';
 import Classify from './pages/Classify';
 import Counsel from './pages/Counsel';
 import Cart from './pages/Cart';
 import Mine from './pages/Mine';
+import Detail from './pages/Detail'
 
 class App extends Component {
 
@@ -46,7 +53,7 @@ class App extends Component {
 			showcon: 'block'
         }
 	}
-	
+
 	showFooter = (isOk)=>{
 		if(isOk){
 			this.setState({
@@ -58,13 +65,14 @@ class App extends Component {
 	render(){
 		return (
 			<div className="App">
-				<HashRouter>
+
 					<Switch>
 						<Route path="/home" component={Home}/>
 						<Route path="/classify" component={Classify}/>
 						<Route path="/counsel" component={Counsel}/>
 						<Route path="/cart" component={Cart}/>
 						<Route path="/mine" component={Mine}/>
+						<Route path="/detail" component={Detail}/>
 						<Redirect to="/home"/>
 					</Switch>
 					<footer>
@@ -73,16 +81,23 @@ class App extends Component {
 							this.state.navs.map(nav=>{
 								return (
 									<NavLink to={nav.path} key={nav.name} style={{textDecoration: 'none'}}>
-										<li>
-											<div><img src={nav.src} alt=""/><p>{nav.text}</p></div>
-										</li>
+										{
+											nav.name=='cart'
+											?
+											<li>
+												<div><Badge count={store.getState().cartgoods.length}><img src={nav.src} alt=""/></Badge><p>{nav.text}</p></div>
+											</li>
+											:
+											<li>
+												<div><img src={nav.src} alt=""/><p>{nav.text}</p></div>
+											</li>
+										}
 									</NavLink>
 								)
 							})
 						}
 						</ul>
 					</footer>
-				</HashRouter>
 			</div>
 		);
 	}

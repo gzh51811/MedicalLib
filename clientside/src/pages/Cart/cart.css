@@ -1,0 +1,402 @@
+#cart{
+    padding-bottom:
+}
+
+#cart ._personal_centers {
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    z-index: 9;
+    color: #222;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+#cart ._personal_centers img {
+    width: 80%;
+    line-height: 44px;
+    margin-top: 5px;
+}
+
+#cart ._header_title{
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 15px;
+    text-align: center;
+    color: #252323;
+    font-weight: bold;
+    font-family: "SimHei",Helvetica,Arial,sans-serif;
+    letter-spacing: 1px;
+}
+#cart ._first_page {
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    z-index: 9;
+    color: #222;
+    text-align: center;
+    font-size: 12px;
+}
+#cart ._activity_wraper {
+    margin-top: 45px;
+    margin-bottom: calc(45px + env(safe-area-inset-bottom));
+}
+
+#isb2c ._b2c_line {
+    line-height: 50px;
+    /* background-color: #fff0eb; */
+    padding: 0 10px;
+    overflow: hidden;
+    background: #F8F8F8;
+    border-bottom: 5px solid #EFEFEF;
+}
+#isb2c ._b2c_log {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    color: #fff;
+    padding: 0 7px;
+    float: left;
+    margin: 12px 5px 0 0;
+    font-size: 0;
+}
+#isb2c ._b2c_log img{
+    height: 18px;
+    width: 18px;
+}
+#isb2c ._free_freight {
+    float: right;
+    color: #fe4310;
+    line-height: 50px;
+}
+#isb2c ._b2c_text {
+    color: #222;
+    float: left;
+    line-height: 50px;
+}
+._activity_wraper .coupon_box{
+    display: table;
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    background: #fff;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+._activity_wraper .coupon_box .youhui{
+    border: 1px solid red;
+    display: table;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 2px 3px;
+    color: red;
+    float: left;
+    margin-right: 10px;
+    width: 25px;
+    text-align: center;
+    font-family: aril;
+    box-sizing: content-box;
+    line-height: 14px;
+}
+._activity_wraper .coupon_box .testS{
+    float: left;
+    width: calc(100% - 100px);
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+}
+._activity_wraper .coupon_box .testS .str_wrap{
+    position: absolute;
+    top: 0;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    width: 100%;
+    font-size: 12px;
+    background: none;
+    white-space: nowrap;
+    margin-right: 150px;
+    color: #000
+}
+._activity_wraper .coupon_box .testS .str_wrap .str_move{
+    white-space: nowrap;
+    position: absolute;
+}
+._activity_wraper .coupon_box .testS .str_wrap .str_move .str_move_clone{
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    left: 100%;
+    right: auto;
+    width: 401px;
+    white-space: nowrap;
+    margin-left: 50px;
+    top: 0;
+}
+._activity_wraper .coupon_box .lingquan{
+    display: table;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 2px 3px;
+    color: #4d4e58;
+    float: right;
+    margin-right: 0px;
+    width: 40px;
+    text-align: center;
+    font-family: aril;
+    line-height: 20px;
+    box-sizing: content-box;
+}
+._activity_wraper ._activity_cont{
+    background-color: #fff;
+    padding: 0;
+}
+._activity_wraper ._activity_cont ._activity_list{
+    cursor: pointer;
+    left: 0;
+    position: relative;
+    padding: 20px 15px;
+    box-sizing: content-box;
+}
+._activity_wraper ._activity_cont ._activity_list ._act_list{
+    position: relative;
+    margin-bottom: 0;
+
+}
+._act_list::after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: ".";
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+._activity_list ._act_list dd{
+    margin-bottom: 0;
+}
+._activity_list ._act_list .ant-checkbox-wrapper{
+    position: absolute;
+    left: 0;
+    top: 30px;
+}
+._activity_list ._act_list ._act_img{
+    width: 77px;
+    height: 77px;
+    border: 1px solid #efefef;
+    position: absolute;
+    top: 0;
+    left: 35px;
+    overflow: hidden;
+    border-radius: 3px;
+}
+._activity_list ._act_list ._act_img img{
+    width: 100%;
+}
+._activity_list ._act_list ._act_img .bg-icon{
+    display: block;
+    height: 15px;
+    width: 51px;
+    background: url(http://img.zdfei.com/static/image/temp/20170829/9afd53ed548b5a30817b3c09245c405c.png) no-repeat;
+    background-size: 51px 14px;
+    position: relative;
+    float: left;
+    z-index: 5;
+    margin-top: -15px;
+    margin-left: 1px;
+}
+._activity_list ._act_list ._act_text{
+    padding-left: 130px;
+    /* float: right; */
+}
+._activity_list ._act_list ._act_text p{
+    margin-bottom: 0;
+}
+._act_list ._act_text ._product_name {
+    height: 34px;
+    line-height: 17px;
+    font-size: 12px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    word-break: break-all;
+}
+._act_list ._act_text ._limit_number {
+    color: #fe4310;
+    font-size: 10px;
+    height: 15px;
+    line-height: 15px;
+}
+._act_list ._act_text ._product_standard {
+    font-size: 10px;
+    color: #999;
+    line-height: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+}
+._act_list ._act_text ._product_standard ._standard_num{
+    margin-left: 0;
+    color: #222222;
+}
+._act_list ._act_text ._buy_price {
+    line-height: 19px;
+    font-size: 13px;
+    color: #fe4310;
+}
+._price_number {
+    margin-left: 4px;
+    font-size: 15px;
+    font-weight: bold;
+}
+._del_price {
+    color: #999;
+    margin-top: 0;
+    display: none;
+    text-decoration: line-through;
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 5px;
+}
+._cart_product_count {
+    height: 21px;
+    width: 47px;
+    position: absolute;
+    right: 33px;
+    bottom: 23px;
+    border: none;
+}
+._minus_one {
+    display: block;
+    width: 21px;
+    height: 21px;
+    background: url(http://img.zdfei.com/static/image/temp/20170810/da269bb63910a4c57c71f2550f306977.png) no-repeat center center;
+    background-size: 21px;
+    position: absolute;
+    left: -21px;
+    top: 0;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+}
+._cart_input {
+    width: 35px;
+    border: none;
+    padding: 0 5px;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    box-sizing: content-box;
+    font-size: 16px;
+    margin-top: -5px;
+    cursor: pointer;
+}
+._add_one {
+    display: block;
+    width: 21px;
+    height: 21px;
+    background: url(http://img.zdfei.com/static/image/temp/20170810/719e81de333ed254745fc062e2e5ebdf.png) no-repeat center center;
+    background-size: 21px;
+    position: absolute;
+    right: -21px;
+    top: 0;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+}
+
+
+._actvity_foot {
+    bottom: 0px !important;
+    border-bottom: 10px solid #efefef;
+    position: relative;
+    height: 50px;
+    border-top: 1px solid #efefef;
+    background-color: #fff;
+    margin-bottom: 0;
+    box-sizing: content-box;
+}
+._sel_all {
+    cursor: pointer;
+    height: 95%;
+    display: block;
+    width: 100px;
+    display: inline-block;
+    margin-bottom: 0;
+}
+._sel_all .ant-checkbox-wrapper{
+    position: absolute;
+    left: 10px;
+    top: 15px;
+}
+._sel_all ._act_all{
+    font-size: 15px;
+    color: #222;
+    margin-left: 25px;
+    line-height: 50px;
+}
+._count_box {
+    width: auto;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 105px;
+    float: right;
+}
+._count_top {
+    height: 18px;
+    line-height: 18px;
+    margin: 8px 0 4px 0;
+}
+._count_num {
+    font-size: 18px;
+    color: #fc4044;
+    float: right;
+}
+._count_all {
+    font-size: 15px;
+    color: #222;
+    margin-right: 6px;
+    float: right;
+}
+._count_notice {
+    height: 14px;
+    line-height: 14px;
+    font-size: 10px;
+    color: #999;
+}
+._submit_btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    float: right;
+    width: 100px;
+    text-align: center;
+    height: 51px;
+    line-height: 51px;
+    background-color: #fe4310;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 0px;
+    cursor: pointer;
+}

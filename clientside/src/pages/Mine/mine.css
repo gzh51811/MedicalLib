@@ -10,7 +10,7 @@
 .login_wrapper .login_title ul li a {height: 30px; display: block; font-size: 14px; color: #4d4e58; font-weight: 500;}
 .login_wrapper .login_title ul li a.active {border-bottom: 2px solid #00a6a0; font-size: 16px; font-weight: bold;}
 .login_wrapper .login_con {width: 92%; margin: auto; border-top: 1px solid #eff1f7; font-size: 16px;}
-.login_wrapper .login_con ul li {height: 48px; line-height: 48px; width: 100%; vertical-align: middle; display: -webkit-box; border-bottom: 1px solid #eff1f7;}
+.login_wrapper .login_con ul li {height: 48px; line-height: 48px; width: 100%; vertical-align: middle; display: -webkit-box; border-bottom: 1px solid #eff1f7;box-sizing: content-box;}
 .login_wrapper .login_con ul li span {display: block; text-align: left; font-size: 14px; color: #4D4E58; font-weight: 600; margin-right: 19px;}
 .login_wrapper .login_con ul li input {display: block; height: 48px; line-height: 48px; -webkit-box-flex: 1; width: 100%;}
 .login_wrapper .login_con ul li .sendmsg {color: #fff; width: 125px; display: block; text-align: center; line-height: 48px; height: 48px; font-size: 14px; background: -webkit-linear-gradient(left, #5fe8ce 2%, #4da5ed 100%);}
@@ -34,29 +34,3 @@
 .login_wrapper .ortherway a {color: #a8a8a8; font-size: 13px;}
 .login_wrapper .login_cont {text-align: center; width: 100%;}
 .login_wrapper .login_cont a img {border-radius: 50%;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

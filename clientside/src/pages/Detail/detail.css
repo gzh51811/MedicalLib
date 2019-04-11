@@ -1,0 +1,475 @@
+#detailmain{
+    background-color: #f8f8f8;
+    padding-bottom: 49px;
+}
+#detailmain .clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: ".";
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+#detailmain header{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    position: fixed;
+    z-index: 9;
+}
+#detailmain ._head_left{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(http://img.zdfei.com/static/image/temp/20171030/490142b6f7a298f977e7490daff0db76.png) no-repeat center center;
+    background-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#detailmain ._right_sign{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(http://img.zdfei.com/static/image/temp/20171030/6aa56327fa3b75b63abdc57387d9db46.png) no-repeat center center;
+    background-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 280px;
+    top: 35px;
+    position: relative;
+    background: #fff;
+}
+.swiper-container img{
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.jiaodiangensui{
+    position: absolute;
+    right: 15px;
+    width: 25px;
+}
+.swiper-pagination{
+    line-height: 25px;
+    position: absolute;
+    background: rgba(0,0,0,.2);
+    border-radius: 13px;
+    color: #222;
+    bottom: 2px;
+    width: 25px;
+    font-size: 12px;
+    background-image: linear-gradient(-270deg, #FFFFFF 2%, #EFEFEF 100%);
+}
+#detailmain ._product_cont {
+    padding: 10px 14px;
+    padding-bottom: 0px;
+    background-color: #fff;
+}
+#detailmain ._product_cont ._product_info {
+    line-height: 26px;
+    font-size: 20px;
+    color: #222;
+    position: relative;
+    padding-right: 50px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-top: 30px;
+}
+#detailmain ._product_cont ._product_info .goodsname{
+    color: #0d0d0d;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+#detailmain ._product_cont ._product_info ._otc{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    display: block;
+    width: 30px;
+    height: 16px;
+    background-color: #00AAA0;
+    color: #fff;
+    text-align: center;
+    line-height: 16px;
+    font-size: 10px;
+    border-radius: 8px;
+    font-family: 'san-serif';
+}
+#detailmain ._product_cont ._product_price{
+    line-height: 24px;
+    color: #fe4310;
+    font-size: 24px;
+    margin-top: 6px;
+    padding-left: 12px;
+    background: url(http://img.zdfei.com/static/image/temp/20171030/a0bb3f101825034dea68f1a0ac24a419.png) no-repeat left 9px;
+    background-size: 12px 12px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#detailmain ._product_cont .coupon_clearfix {
+    display: block;
+    background: rgba(236,202,103,0.17);
+    overflow: hidden;
+    border-radius: 3px;
+    border: 1px solid #ECCA67;
+    padding: 13px 13px 13px 0;
+    padding-left: 13px;
+    font-family: "SimHei",Helvetica,Arial,sans-serif;
+    margin-bottom: 10px;
+}
+#detailmain ._product_cont .coupon_clearfix .coupon_img_span{
+    width: 20px;
+    float: left;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+#detailmain ._product_cont .coupon_clearfix .coupon_img_span img{
+    width: 100%;
+}
+#detailmain ._product_cont .coupon_clearfix .coupon_info_span {
+    float: left;
+    font-size: 13px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    color: #4D4E58;
+    line-height: 20px;
+    font-family: aril;
+}
+#detailmain ._product_cont .coupon_right_span{
+    float: right;
+    display: block;
+    font-size: 13px;
+    color: #4D4E58;
+    font-weight: bold;
+    padding-right: 0px;
+    line-height: 18px;
+    float: right;
+    line-height: 18px;
+}
+.coupon_right_span:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 0px;
+    width: 6px;
+    height: 12px;
+    background: url(http://img.zdfei.com/static/image/htmls/single/2019-02-01/5c53ae59d7f30.png) no-repeat;
+    background-size: 6px auto;
+    padding-left: 0px;
+    margin-left: 3px;
+}
+#detailmain ._show_line {
+    padding: 13px 50px 5px 0;
+    font-size: 14px;
+    color: #101010;
+    border-top: 1px solid #efefef;
+    position: relative;
+}
+#detailmain ._show_line ._effect_line {
+    display: inline-block;
+     white-space: nowrap;
+     width: 100%;
+     line-height: 20px;
+     overflow: hidden;
+     text-overflow:ellipsis;
+     margin-bottom: 0;
+}
+#detailmain ._show_line ._effect_line ._effect {
+    color: #999;
+    margin-right: 10px;
+}
+
+#detailmain ._show_more {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 46px;
+    background: url(http://img.zdfei.com/static/image/temp/20171101/047370e0d0967df70c9788de1ac82292.png) no-repeat right center;
+    background-size: 21px 5px;
+    margin-bottom: 0;
+}
+#detailmain .groom-box{
+    background-color: #fff;
+    margin-top: 10px;
+
+}
+#detailmain ._sel_spc{
+    height: 44px;
+    font-size: 14px;
+    color: #222;
+    padding: 12px 0;
+    position: relative;
+}
+#detailmain ._left_line {
+    border-left: 0px!important;
+    width: 104px;
+    height: 5px;
+    background: url(http://img.zdfei.com/static/image/temp/20170927/c6e738f2cb2179f6a905d6b038e83a59.png) no-repeat center center;
+    background-size: 104px 5px;
+    position: absolute;
+    left: 5px;
+    top: 19px;
+}
+#detailmain ._sel_text {
+    color: #222;
+    font-size: 14px;
+    width: 56px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -28px;
+    top: 12px;
+}
+#detailmain ._right_line {
+    width: 104px;
+    height: 5px;
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    background: url(http://img.zdfei.com/static/image/temp/20170927/c6e738f2cb2179f6a905d6b038e83a59.png) no-repeat center center;
+    background-size: 104px 5px;
+    position: absolute;
+    right: 5px;
+    top: 19px;
+}
+#detailmain .guess-box{
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 6px;
+    padding-bottom: 5px;
+}
+#detailmain .guess-box>div{
+    width: auto;
+    overflow-x: auto;
+    display: flex;
+}
+#detailmain .guess-box>div::-webkit-scrollbar{
+	display: none;
+}
+#detailmain .goods-item{
+    width: 30vw;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    height: auto;
+    position: relative;
+}
+#detailmain .goods-item img{
+	width: 100%;
+	border-style: none;
+}
+#detailmain .goods-item .item_title{
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+}
+#detailmain .goods-item .item_price{
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #FE4310;
+    margin-bottom: 0;
+    margin-left: 2px;
+}
+#detailmain .product-info-link {
+    background: #fff;
+    border-top: #f8f8f8 10px solid;
+    padding-left: 10px;
+    margin-top: -5px;
+    margin-bottom: 100px;
+}
+#detailmain .ant-tabs-bar{
+    border-bottom: 0;
+}
+#detailmain .tuwenxiangqing img{
+    width: 100%;
+}
+#detailmain .shuomingshu{
+    margin-top: 32px;
+    width: 96%;
+}
+#detailmain .shuomingshu p{
+    line-height: 28px;
+}
+#detailmain .shuomingshu strong{
+    font-size: 14px;
+    font-family: 宋体;
+    color: #3F3F3F;
+    font-weight: normal;
+}
+#detailmain .shuomingshu span{
+    font-size:14px;
+    color:#3F3F3F
+}
+#detailmain ._nav_ul{
+    display: block;
+    padding: 18px 0 10px 0;
+    list-style: none;
+    border: none;
+    width: 100%;
+    left: 0;
+    background: #fff;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+#detailmain ._nav_ul li{
+    line-height: 17px;
+    text-decoration: none;
+    text-align: center;
+    color: #222;
+    font-size: 12px;
+    float: left;
+    width: 25%;
+    overflow: hidden;
+    background-color: #fff;
+}
+#_menu_con{
+    min-height: 250px;
+}
+#_menu_con .line_div{
+    width: 100%;
+    height: 5px;
+    background: #f8f8f8;
+    position: absolute;
+    left: 0;
+}
+#_menu_con ._comment_list{
+    padding: 20px 6px 24px 46px;
+    position: relative;
+}
+#_menu_con ._user_pic{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    left: 6px;
+    top: 18px;
+}
+#_menu_con ._user_pic img{
+    width: 100%;
+}
+#_menu_con ._comment_title {
+    font-size: 14px;
+    color: #222;
+    height: 18px;
+    line-height: 18px;
+    padding-right: 110px;
+    position: relative;
+}
+#_menu_con ._comment_title ._user_name{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+#_menu_con ._comment_title ._comment_time{
+    font-size: 14px;
+    color: #999;
+    width: 90px;
+    line-height: 18px;
+    background-color: #fff;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+#_menu_con ._star_bg {
+    width: 135px;
+    height: 18px;
+    position: relative;
+    background: url(http://img.zdfei.com/static/image/temp/20170818/a19296682341e8d318b688728e4859c6.png) repeat-x;
+    background-size: 135px 18px;
+    background-position: 0 0;
+    overflow: hidden;
+    margin-top: 6px;
+}
+#_menu_con ._star_bg span._star_bg1 {
+    width: 20%;
+    z-index: 10;
+}
+#_menu_con ._star_bg span._star_bg2 {
+    width: 40%;
+    z-index: 8;
+}
+#_menu_con ._star_bg span._star_bg3 {
+    width: 60%;
+    z-index: 6;
+}
+#_menu_con ._star_bg span._star_bg4 {
+    width: 80%;
+    z-index: 4;
+}
+#_menu_con ._star_bg span._star_bg5 {
+    width: 100%;
+    z-index: 2;
+}
+#_menu_con ._star_bg span._star_active {
+    background: url(http://img.zdfei.com/static/image/temp/20170818/183dc2361f12bdc6ec3870ffa1bb4885.png) repeat-x;
+    background-size: 27px 18px;
+}
+#_menu_con ._star_bg span {
+    width: 20%;
+    height: 19px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#_menu_con ._comment_cont {
+    /* line-heiht: 20px; */
+    font-size: 14px;
+    color: #222;
+    margin-top: 12px;
+}
+.ant-back-top{
+    right: 10px;
+    bottom: 84px;
+    width: 42px;
+    height: 42px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: .8;
+}
+.ant-back-top-content{
+    background-color: #fff;
+}
+.ant-back-top-icon{
+    width: 42px;
+    height: 42px;
+    background: url(http://img.zdfei.com/static/image/temp/20160715/9cb9827a622f3f3b628dd2e5aa1e50b2.png) no-repeat;
+    background-size: 42px;
+    margin:0;
+    margin-left: -1px;
+    margin-top: -1px;
+}

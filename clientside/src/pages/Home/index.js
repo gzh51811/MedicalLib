@@ -3,13 +3,73 @@ import './home.css';
 import { Carousel ,List, message, Avatar, Spin} from 'antd';
 import axios from 'axios';
 import 'antd/dist/antd.css';
+import InfiniteScroll from 'react-infinite-scroller';
+
+
+
 class Home extends  Component{
     constructor(){
         super();
         this.state = {
+            data: [],
+           loading: false,
+           hasMore: true,
+           hotlist:[]
 
         }
     }
+
+
+  componentDidMount() {
+    this.fetchData((res) => {
+      this.setState({
+        data: res.data,
+      });
+    });
+
+    // 热门商品渲染
+    axios.get('http://localhost:8000/home/hot')
+    .then( response => {
+      response.data[0].length = 10;
+      var arr = Array.from(response.data[0]);
+      this.setState({
+        hotlist: [...arr],
+      });
+    })
+
+  }
+  fetchData = (callback) => {
+          axios.get('http://localhost:8000/home/care')
+     .then(function (response) {
+       callback(response);
+     })
+  }
+
+  handleInfiniteOnLoad = () => {
+    let data = this.state.data;
+    this.setState({
+      loading: true,
+    });
+    if (data.length > 8) {
+      message.warning('Infinite List loaded all');
+      this.setState({
+        hasMore: false,
+        loading: false,
+      });
+      return;
+    }
+    this.fetchData((res) => {
+      data = data.concat(res.results);
+      this.setState({
+        data,
+        loading: false,
+      });
+    });
+  }
+
+
+
+
 
     render(){
         return(
@@ -122,14 +182,18 @@ class Home extends  Component{
       					<div className='hotgoods-list'>
       						<div className="list-goods">
 
+                  {
+                    this.state.hotlist.map(item=>{
+                      return <div className='goods-item' key={item.goods_id}>
+          								<div>
+          									<img src={'http://img.zdfei.com/'+item.abbreviation_picture}/>
+          									<p className='item_title'>{item.short_name}</p>
+          									<p className='item_price'>￥{item.price}</p>
+          								</div>
+          							</div>
+                    })
+                  }
 
-      							<div className='goods-item'>
-      								<div>
-      									<img src='http://img.zdfei.com//static/image/goods//201806/2cf505d2bd1572d2c6d948531939befc.jpg'/>
-      									<p className='item_title'>扬子江 伏立康唑分散片</p>
-      									<p className='item_price'>￥1251</p>
-      								</div>
-      							</div>
 
 
 
@@ -138,9 +202,33 @@ class Home extends  Component{
       			   </div>
                    <div className='fangan-box'>
                         <h2>健康照顾方案</h2>
-                        <ul className="fangan-list-ul">
-
-                        </ul>
+                        <div className="fangan-list-ul">
+                            <InfiniteScroll
+          initialLoad={false}
+          pageStart={0}
+          loadMore={this.handleInfiniteOnLoad}
+          hasMore={!this.state.loading && this.state.hasMore}
+          useWindow={false}
+        >
+          <List
+            dataSource={this.state.data}
+            renderItem={item => (
+              <List.Item key={item.id}>
+                <List.Item.Meta/>
+                <div className="care-item">
+                    <img src={item.imgUrl}/>
+                </div>
+              </List.Item>
+            )}
+          >
+            {this.state.loading && this.state.hasMore && (
+              <div className="demo-loading-container">
+                <Spin />
+              </div>
+            )}
+          </List>
+        </InfiniteScroll>
+                        </div>
                    </div>
             </div>
         )

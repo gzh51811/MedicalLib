@@ -14,7 +14,7 @@ class Mine extends Component {
     }
     componentWillMount(){
         // console.log(document.cookie)
-        if(!document.cookie){
+        if(!sessionStorage.getItem('username')){
             this.setState({
                 isshow: true
             });
